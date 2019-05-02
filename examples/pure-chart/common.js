@@ -240,7 +240,7 @@ export const drawYAxis = (color = '#e0e0e0') => {
   )
 }
 
-export const drawYAxisLabels = (arr, height, minValue, color = '#000000') => {
+export const drawYAxisLabels = (arr, height, minValue, color = '#000000', yTitle = "") => {
   return (
     <View style={{
       width: 33,
@@ -250,7 +250,27 @@ export const drawYAxisLabels = (arr, height, minValue, color = '#000000') => {
       marginBottom: minValue && arr && arr.length > 0 ? -1 * arr[0][2] * minValue : null,
       overflow: 'hidden'
     }}>
-
+      <View
+        style={{
+          flex: 1,
+          width: "100%",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Text
+          style={{
+            justifyContent: "flex-end",
+            textAlign: "center",
+            width: height,
+            height: height,
+            backgroundColor: "orange",
+            color: "white",
+            transform: [{ rotate: "-90deg" }]
+          }}
+        >
+          {yTitle}
+        </Text>
+      </View>
       {arr.length === 0 ? (
         <View
           key={'guide0'}
