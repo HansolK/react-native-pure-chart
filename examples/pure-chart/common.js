@@ -259,12 +259,12 @@ export const drawYAxisLabels = (arr, height, minValue, color = '#000000', yTitle
       >
         <Text
           style={{
+            margin: 5,
             justifyContent: "flex-end",
             textAlign: "center",
             width: height,
             height: height,
-            backgroundColor: "orange",
-            color: "white",
+            color: color,
             transform: [{ rotate: "-90deg" }]
           }}
         >
