@@ -217,7 +217,7 @@ export default class ColumnChart extends Component {
             this.props.height + 20,
             this.props.minValue,
             this.props.labelColor,
-            this.props.yTitle
+            this.props.unit
           )}
         </View>
         <View style={styles.mainContainer}>

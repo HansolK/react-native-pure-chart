@@ -257,7 +257,7 @@ export const drawYAxisLabels = (
   height,
   minValue,
   color = "#000000",
-  yTitle = ""
+  unit = ""
 ) => {
   return (
     <View
@@ -308,7 +308,7 @@ export const drawYAxisLabels = (
                 position: "absolute"
               }}
             >
-              <Text style={{ fontSize: scale(11), color: color }}>{v[0]}</Text>
+              <Text style={{ fontSize: scale(11), color: color }}>{v[0]}{unit}</Text>
             </View>
           );
         })
